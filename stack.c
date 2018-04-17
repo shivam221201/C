@@ -22,12 +22,20 @@ int peek()
 {
 return stack[top];
 }
-int pop()
+int pop() //pop function
 {
-//rachit will add here//
-
+int data;
+if(!isempty())
+{
+data = stack[top];
+top =top-1;
+return data;}
 }
-
+	else
+{
+printf("could not retrieve data,stack is empty");
+}
+}
 int push(int data)
 {
 	////pratyush will add here
