@@ -36,9 +36,26 @@ return data;}
 printf("could not retrieve data,stack is empty");
 }
 }
+<<<<<<< HEAD
 int push(int data)
+=======
+
+int push(int data)//push function
+>>>>>>> origin/Pratyush
 {
-	////pratyush will add here
+	if(isfull())
+	{
+		printf("The Stack is full and data cannot be added any further\n Please delete before further insertion\n");
+	}
+	else if(isempty())
+	{
+		printf("Entering first element");
+		stack[++top]=data;
+	}
+	else
+	{
+		stack[++top]=data;
+	}
 
 }
 
