@@ -5,7 +5,11 @@ int stack[8];
 int top = -1;
 int isempty()
 {
-//saurabh will add here
+//saurabh added here
+if (top==-1)
+return 1;
+else
+return 0;
 }
 int isfull()
 {
