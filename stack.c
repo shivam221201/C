@@ -26,7 +26,19 @@ int pop()
 
 int push(int data)
 {
-	////pratyush will add here
+	if(isfull())
+	{
+		printf("The Stack is full and data cannot be added any further\n Please delete before further insertion\n");
+	}
+	else if(isempty())
+	{
+		printf("Enteringu first element");
+		stack[++top]=data;
+	}
+	else
+	{
+		stack[++top]=data;
+	}
 
 }
 
