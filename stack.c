@@ -18,7 +18,7 @@ int peek()
 {
 return stack[top];
 }
-int pop()
+int pop() //pop function
 {
 int data;
 if(!isempty())
