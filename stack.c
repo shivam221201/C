@@ -24,7 +24,7 @@ int pop()
 
 }
 
-int push(int data)
+int push(int data)//push function
 {
 	if(isfull())
 	{
@@ -32,7 +32,7 @@ int push(int data)
 	}
 	else if(isempty())
 	{
-		printf("Enteringu first element");
+		printf("Entering first element");
 		stack[++top]=data;
 	}
 	else
