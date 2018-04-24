@@ -20,9 +20,46 @@ int main()
     struct node *p = NULL, *q = NULL;
     void move(struct node *head)
 {
-//add rachit chauhan
+// necessary changes made
     struct node *p, *q;
     int ch;
+   p = q = head;
+    printf("\nPointer at %d\n", head->num);
+    do
+    {
+        printf("Select option:\n1. Move front\n2. Move back\n3. Exit\nYour choice: ");
+        scanf("%d", &ch);
+        switch(ch)
+        {
+        case 1: if(q->next != NULL)
+                {
+                    q = q->next;
+                    printf("\nPointer at %d\n", q->num);
+                }
+                else
+                {
+                    printf("\nPointer at last node %d. Cannot move ahead.\n", q->num);
+                }
+                break;
+        case 2: while (p->next != q)
+                {
+                    p = p->next;
+                }
+                if (p == q)
+                {
+                    printf("\nPointer at first node %d. Cannot move behind.\n", q->num);
+                }
+                else
+                {
+                    q = p;
+                    p = head;
+                    printf("\nPointer at %d\n", q->num);
+                }
+                break;
+        case 3: return;
+        default: printf("\nInvalid choice entered. Try again\n");
+        }
+    } while (1);
 }
  //add sauarbh dimri
 void create(struct node **head)
