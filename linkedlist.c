@@ -24,7 +24,33 @@ int main()
     struct node *p, *q;
     int ch;
 }
- //add sauarbh dimri
+//REquired code has been added by SAurabh
+{
+    int c, ch;
+    struct node *temp, *rear;
+ 
+    do
+    {
+        printf("Enter number: ");
+        scanf("%d", &c);
+        temp = (struct node *)malloc(sizeof(struct node));
+        temp->num = c;
+        temp->next = NULL;
+        if (*head == NULL)
+        {
+            *head = temp;
+        }
+        else
+        {
+            rear->next = temp;
+        }
+        rear = temp;
+        printf("Do you wish to continue [1/0]: ");
+        scanf("%d", &ch);
+    } while (ch != 0);
+    printf("\n");
+}
+
 void create(struct node **head)
 {
     int c, ch;
