@@ -20,7 +20,7 @@ int main()
     struct node *p = NULL, *q = NULL;
     void move(struct node *head)
 {
-// necessary changes made
+                                                // necessary changes made
     struct node *p, *q;
     int ch;
    p = q = head;
