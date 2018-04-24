@@ -29,10 +29,27 @@ void create(struct node **head)
 {
     int c, ch;
 
- //add sajal sood
+ //added sajal sood
 void display(struct node *head)
 {
+    while (head != NULL)
+    {
+        printf("%d\t", head->num);
+        head = head->next;
+    }
+    printf("\n");
+}
  
+void release(struct node **head)
+{
+    struct node *temp;
+    while ((*head) != NULL)
+    {
+        temp = *head;
+        (*head) = (*head)->next;
+        free(temp);
+    }
+} 
 void release(struct node **head)
 {
     struct node *temp;
